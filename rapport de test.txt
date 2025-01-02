@@ -1,0 +1,69 @@
+Backend - API (Node.js, Express, MongoDB)
+1. Test des Routes API
+GET /api/produits
+
+Objectif : Vérifier la récupération de tous les produits.
+Test : Envoi d'une requête GET à /api/produits avec des données existantes dans la base de données.
+Résultat attendu : Retourner un tableau de produits.
+Résultat obtenu : OK, le serveur retourne la liste de produits avec succès.
+GET /api/produits/:id
+
+Objectif : Vérifier la récupération des détails d'un produit spécifique.
+Test : Envoi d'une requête GET à /api/produits/:id avec un id valide d'un produit existant.
+Résultat attendu : Retourner les détails du produit spécifié.
+Résultat obtenu : OK, les détails du produit sont retournés correctement.
+POST /api/produits
+
+Objectif : Tester l'ajout d'un nouveau produit.
+Test : Envoi d'une requête POST à /api/produits avec un corps de requête valide (nom, prix, catégorie).
+Résultat attendu : Le produit est ajouté à la base de données et renvoie un statut 201 Created.
+Résultat obtenu : OK, le produit a été ajouté avec succès et le serveur retourne un message de confirmation.
+PUT /api/produits/:id
+
+Objectif : Tester la mise à jour d'un produit existant.
+Test : Envoi d'une requête PUT à /api/produits/:id avec un id valide et les nouvelles données du produit.
+Résultat attendu : Le produit est mis à jour dans la base de données et renvoie un statut 200 OK.
+Résultat obtenu : OK, le produit a été mis à jour correctement.
+DELETE /api/produits/:id
+
+Objectif : Vérifier la suppression d'un produit.
+Test : Envoi d'une requête DELETE à /api/produits/:id avec un id valide d'un produit existant.
+Résultat attendu : Le produit est supprimé et le serveur renvoie un message de succès.
+Résultat obtenu : OK, le produit a été supprimé avec succès.
+2. Test des Erreurs
+Route inexistante
+
+Test : Envoi d'une requête vers une route non définie.
+Résultat attendu : Retourner une erreur 404 Not Found.
+Résultat obtenu : OK, une erreur 404 est retournée comme prévu.
+Erreur serveur
+
+Frontend - Angular (Interface Utilisateur)
+1. Test de la Liste des Produits
+Affichage des produits
+
+Objectif : Vérifier que la liste des produits est bien affichée.
+Test : Accéder à /produits et vérifier l'affichage de la liste des produits.
+Résultat attendu : La liste des produits est correctement affichée dans un tableau.
+Résultat obtenu : OK, tous les produits sont affichés dans un tableau avec les colonnes correctes.
+2. Test de l'Ajout d'un Produit
+Formulaire d'ajout
+
+Objectif : Tester l'ajout d'un produit à travers le formulaire.
+Test : Remplir le formulaire d'ajout avec des données valides (nom, prix, catégorie) et soumettre.
+Résultat attendu : Le produit est ajouté à la base de données et un message de confirmation est affiché.
+Résultat obtenu : OK, le produit est ajouté et un message de confirmation apparaît.
+3. Test de la Modification d'un Produit
+Formulaire de modification
+
+Objectif : Tester la modification d'un produit existant.
+Test : Sélectionner un produit existant, modifier les champs (nom, prix, catégorie) et soumettre.
+Résultat attendu : Le produit est mis à jour dans la base de données et un message de succès est affiché.
+Résultat obtenu : OK, les modifications sont enregistrées et reflétées immédiatement dans la liste des produits.
+4. Test de la Suppression d'un Produit
+Suppression de produit
+
+Objectif : Tester la suppression d'un produit.
+Test : Cliquer sur le bouton de suppression d'un produit et confirmer la suppression.
+Résultat attendu : Le produit est supprimé de la liste et de la base de données.
+Résultat obtenu : OK, le produit est supprimé et la liste des produits est mise à jour en conséquence.
