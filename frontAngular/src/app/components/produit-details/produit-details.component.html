@@ -1,0 +1,9 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Détails du Produit</h1>
+  <div *ngIf="produit">
+    <p><strong>Nom :</strong> {{ produit.nom }}</p>
+    <p><strong>Prix :</strong> {{ produit.prix | currency:'TND' }}</p>
+    <p><strong>Catégorie :</strong> {{ produit.categorie }}</p>
+  </div>
+  <a routerLink="/produits" class="btn btn-secondary mt-3">Retour à la liste</a>
+</div>

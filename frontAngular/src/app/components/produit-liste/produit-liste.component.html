@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Liste des Produits</h1>
+  <a routerLink="/produits/ajouter" class="btn btn-primary mb-3">Ajouter un Produit</a>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prix</th>
+      <th>Catégorie</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let produit of produits">
+      <td>{{ produit.nom }}</td>
+      <td>{{ produit.prix | currency:'TND' }}</td>
+      <td>{{ produit.categorie }}</td>
+      <td>
+        <a [routerLink]="['/produits', produit._id]" class="btn btn-info btn-sm me-2">Voir</a>
+        <a [routerLink]="['/produits/modifier', produit._id]" class="btn btn-warning btn-sm me-2">Modifier</a>
+        <button (click)="supprimerProduit(produit._id)" class="btn btn-danger btn-sm">Supprimer</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
